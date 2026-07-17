@@ -1,5 +1,5 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&family=Noto+Serif+Kannada:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Arima:wght@400;700&family=Noto+Serif+Kannada:wght@400;700&display=swap');
 
 /* General Resets and Layout */
 * {
@@ -9,12 +9,66 @@
 }
 
 body {
-    background-color: #050505; /* Deep obsidian */
-    color: #fcfcfc; /* Off-white/cream */
-    font-family: 'Arima', 'Noto Serif Kannada', serif;
+    /* Rich, dark charcoal base */
+    background-color: #0d0a0a;
+    color: #e2dcd5; /* Ash/parchment white for text readability */
+    position: relative;
     overflow-x: hidden;
     width: 100vw;
+    font-family: 'Cinzel', 'Georgia', serif; /* Serif font for a gothic/fantasy feel */
 }
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Soft shadow frame around the edges */
+    background: radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
+    pointer-events: none;
+    z-index: 10; /* Sits on top of background but below interactive content */
+}
+
+/* Ambient container behind all content */
+.fantasy-ambient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Crimson magic glow */
+.crimson-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    /* Deep crimson fading into the dark base */
+    background: radial-gradient(circle, rgba(139, 0, 0, 0.12) 0%, rgba(139, 0, 0, 0) 70%);
+    filter: blur(80px);
+}
+
+/* Antique gold light trail */
+.gold-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    /* Muted gold/amber light trail effect */
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, rgba(212, 175, 55, 0) 65%);
+    filter: blur(70px);
+}
+
+/* Dramatic placement mapping */
+.crimson-top-left  { top: -10%; left: -10%; }
+.gold-mid-right    { top: 40%; right: -5%; }
+.crimson-bottom    { bottom: -5%; left: 25%; }
 
 .container {
     width: 100%;
@@ -117,7 +171,7 @@ hr {
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
-    
+
 }
 
 .intro h1 {
@@ -211,16 +265,25 @@ hr {
 }
 
 .content-card {
-    background: linear-gradient(145deg, rgba(30, 30, 30, 0.8), rgba(10, 10, 10, 0.9));
-    border: 1px solid rgba(139, 0, 0, 0.5); /* Fiery red hint */
-    border-radius: 8px;
+    /* Dark obsidian/stone base */
+    background: rgba(18, 14, 14, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    /* A subtle gold-tinted border that looks like inlaid metal */
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 8px; /* Sharper corners feel more ancient than round ones */
+
     padding: 15px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.8);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+    /* Heavy shadow to blend into the darkness */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
     opacity: 0;
     transform: translateY(20px);
     animation: fadeUp 0.6s ease forwards;
@@ -228,9 +291,14 @@ hr {
 }
 
 .content-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(139, 0, 0, 0.4), 0 0 15px rgba(255, 215, 0, 0.2);
-    border-color: #FFD700;
+    /* Border ignites into a warm gold */
+    border-color: rgba(212, 175, 55, 0.5);
+
+    /* Crimson back-glow behind the hovered element */
+    box-shadow: 0 0 30px rgba(139, 0, 0, 0.35),
+                inset 0 0 15px rgba(212, 175, 55, 0.05);
+
+    transform: translateY(-4px) scale(1.01);
 }
 
 .category-icon {
