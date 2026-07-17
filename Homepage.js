@@ -5,47 +5,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Default items
     const defaultItems = [
         {
-            title: 'Poetry',
+            title: 'Netflix Orient',
             titleEn: '',
-            category: 'Poetry',
-            summary: "Expressive verses that capture the essence of emotions and life's simple, profound moments.",
-            iconFile: 'assets/Feather Quill.png'
-        },
-        {
-            title: 'ಸೀರಿಯಲ್',
-            titleEn: 'Serial',
-            category: 'Serial',
-            summary: "Engaging narratives and character-driven plays that brings the character alive.",
+            category: 'Netflix',
+            summary: "Explore cinematic and episodic storytelling with a Netflix orientation.",
             iconFile: 'assets/Theater Masks.png'
         },
         {
-            title: 'Series',
-            titleEn: 'ಸಣ್ಣ ಕಥೆಗಳು',
-            category: 'Series',
-            summary: "A fun, bridge-building Series for K-Drama lovers with Indain slang adding local context.",
-            iconFile: 'assets/Speech Bubble.png'
-        },
-        {
-            title: 'Songs',
-            titleEn: 'ಹಾಡುಗಳು',
-            category: 'Songs',
-            summary: "",
-            iconFile: 'assets/Mobile Phone Play.png'
-        },
-        {
-            title: 'Cinema',
+            title: 'Cinema Orient',
             titleEn: '',
             category: 'Cinema',
             summary: "Insights, scripts, and discussions diving into the world of storytelling on the silver screen.",
             iconFile: 'assets/Film Reel.png'
+        },
+        {
+            title: 'Poetry Orient',
+            titleEn: '',
+            category: 'Poetry',
+            summary: "Expressive verses that capture the essence of emotions and life's simple, profound moments.",
+            iconFile: 'assets/Feather Quill.png'
         }
     ];
 
     // Load items from localStorage
-    let contentItems = JSON.parse(localStorage.getItem('contentItemsDarkFantasy_v3'));
+    let contentItems = JSON.parse(localStorage.getItem('contentItemsDarkFantasy_v4'));
     if (!contentItems || contentItems.length === 0) {
         contentItems = defaultItems;
-        localStorage.setItem('contentItemsDarkFantasy_v3', JSON.stringify(contentItems));
+        localStorage.setItem('contentItemsDarkFantasy_v4', JSON.stringify(contentItems));
     }
 
     function renderCard(item) {
