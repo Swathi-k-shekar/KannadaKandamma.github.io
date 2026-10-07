@@ -133,6 +133,24 @@ header {
     background-color: #111; /* Fallback */
 }
 
+#experience {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('assets/Moonlit Silhouette.png');
+    background-color: #111; /* Fallback */
+}
+
+.experience-list {
+    color: #fcfcfc;
+    font-family: 'Arima', serif;
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.experience-list li {
+    margin-bottom: 10px;
+}
+
 #content-portfolio {
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('assets/Fiery Nebula.png');
     background-color: #200000; /* Fallback */

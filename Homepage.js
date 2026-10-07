@@ -5,33 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Default items
     const defaultItems = [
         {
-            title: 'Netflix Orient',
-            titleEn: '',
-            category: 'Netflix',
-            summary: "Explore cinematic and episodic storytelling with a Netflix orientation.",
+            title: 'Technical Frameworks',
+            titleEn: 'Hybrid Playwright-Java Automation Engine',
+            category: 'Technical',
+            summary: 'Scalable testing architecture, POM structure, and high-speed execution.',
             iconFile: 'assets/Theater Masks.png'
         },
         {
-            title: 'Cinema Orient',
-            titleEn: '',
-            category: 'Cinema',
-            summary: "Insights, scripts, and discussions diving into the world of storytelling on the silver screen.",
+            title: 'Creative Portfolio',
+            titleEn: 'Sapnaaradnya Creations / Narrative Series',
+            category: 'Creative',
+            summary: 'Scriptwriting, digital storytelling, and cinematic concepts.',
             iconFile: 'assets/Film Reel.png'
-        },
-        {
-            title: 'Poetry Orient',
-            titleEn: '',
-            category: 'Poetry',
-            summary: "Expressive verses that capture the essence of emotions and life's simple, profound moments.",
-            iconFile: 'assets/Feather Quill.png'
         }
     ];
 
     // Load items from localStorage
-    let contentItems = JSON.parse(localStorage.getItem('contentItemsDarkFantasy_v4'));
+    let contentItems = JSON.parse(localStorage.getItem('contentItemsDarkFantasy_v5'));
     if (!contentItems || contentItems.length === 0) {
         contentItems = defaultItems;
-        localStorage.setItem('contentItemsDarkFantasy_v4', JSON.stringify(contentItems));
+        localStorage.setItem('contentItemsDarkFantasy_v5', JSON.stringify(contentItems));
     }
 
     function renderCard(item) {
@@ -49,10 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         card.addEventListener('click', () => {
-            if (item.category === 'Poetry') {
-                window.open('https://www.instagram.com/sapnaaradnyaig', '_blank');
-            } else if (item.category === 'Cinema') {
-                window.location.href = 'cinema.html';
+            if (item.category === 'Technical') {
+                window.open('https://github.com/SapnaAradnya', '_blank');
+            } else if (item.category === 'Creative') {
+                window.open('https://www.youtube.com/@sapnaaradnyaYT', '_blank');
             }
         });
 
