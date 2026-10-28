@@ -9,9 +9,9 @@
 }
 
 body {
-    /* Rich, dark charcoal base */
-    background-color: #0d0a0a;
-    color: #e2dcd5; /* Ash/parchment white for text readability */
+    /* Deep charcoal base for Fire and Water theme */
+    background-color: #080B12;
+    color: #F4F1EA; /* Main text */
     position: relative;
     overflow-x: hidden;
     width: 100vw;
@@ -43,32 +43,55 @@ body::after {
     overflow: hidden;
 }
 
-/* Crimson magic glow */
+/* Crimson fire glow */
 .crimson-glow {
     position: absolute;
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    /* Deep crimson fading into the dark base */
-    background: radial-gradient(circle, rgba(139, 0, 0, 0.12) 0%, rgba(139, 0, 0, 0) 70%);
+    /* Fire crimson */
+    background: radial-gradient(circle, rgba(198, 40, 56, 0.12) 0%, rgba(198, 40, 56, 0) 70%);
     filter: blur(80px);
 }
 
-/* Antique gold light trail */
+/* Molten gold light trail */
 .gold-glow {
     position: absolute;
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    /* Muted gold/amber light trail effect */
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, rgba(212, 175, 55, 0) 65%);
+    /* Molten gold */
+    background: radial-gradient(circle, rgba(233, 180, 76, 0.06) 0%, rgba(233, 180, 76, 0) 65%);
     filter: blur(70px);
 }
 
-/* Dramatic placement mapping */
+/* Deep ocean blue glow */
+.ocean-blue-glow {
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    /* Deep ocean blue */
+    background: radial-gradient(circle, rgba(16, 42, 67, 0.25) 0%, rgba(16, 42, 67, 0) 70%);
+    filter: blur(90px);
+}
+
+/* Aqua cyan light trail */
+.cyan-glow {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    /* Aqua cyan */
+    background: radial-gradient(circle, rgba(85, 221, 224, 0.06) 0%, rgba(85, 221, 224, 0) 65%);
+    filter: blur(65px);
+}
+
+/* Dramatic placement mapping - Fire on left, Water on right */
 .crimson-top-left  { top: -10%; left: -10%; }
-.gold-mid-right    { top: 40%; right: -5%; }
-.crimson-bottom    { bottom: -5%; left: 25%; }
+.gold-mid-left     { top: 40%; left: -5%; }
+.ocean-blue-bottom-right { bottom: -10%; right: -10%; }
+.cyan-mid-right    { top: 20%; right: -5%; }
 
 .container {
     width: 100%;
@@ -108,7 +131,7 @@ header {
 
 .nav-link:hover {
     color: #ffffff;
-    text-shadow: 0 0 10px #FFD700;
+    text-shadow: 0 0 10px #55DDE0;
 }
 
 /* Sections - Mobile First (100vh) */
@@ -177,10 +200,10 @@ h1, h2 {
 hr {
     width: 60px;
     height: 2px;
-    background-color: #8B0000;
+    background-color: #C62838;
     border: none;
     margin: 0 auto 25px auto;
-    box-shadow: 0 0 8px #8B0000;
+    box-shadow: 0 0 8px #C62838;
 }
 
 /* Home Section */
@@ -209,9 +232,9 @@ hr {
 
 .view-collection-btn {
     display: inline-block;
-    background-color: transparent;
-    color: #FFD700;
-    border: 2px solid #FFD700;
+    background-image: linear-gradient(45deg, #C62838, #FF6B35);
+    color: #F4F1EA;
+    border: none;
     padding: 12px 25px;
     text-decoration: none;
     font-family: 'Arima', serif;
@@ -220,13 +243,14 @@ hr {
     letter-spacing: 1px;
     border-radius: 4px;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2) inset, 0 0 10px rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 15px rgba(198, 40, 56, 0.4);
 }
 
 .view-collection-btn:hover {
-    background-color: rgba(255, 215, 0, 0.1);
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5) inset, 0 0 20px rgba(255, 215, 0, 0.5);
-    text-shadow: 0 0 8px #FFD700;
+    background-image: linear-gradient(45deg, #FF6B35, #C62838);
+    box-shadow: 0 0 25px rgba(255, 107, 53, 0.6);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
 }
 
 /* Portfolio Section */
@@ -309,12 +333,12 @@ hr {
 }
 
 .content-card:hover {
-    /* Border ignites into a warm gold */
-    border-color: rgba(212, 175, 55, 0.5);
+    /* Border ignites into aqua cyan */
+    border-color: rgba(85, 221, 224, 0.5);
 
-    /* Crimson back-glow behind the hovered element */
-    box-shadow: 0 0 30px rgba(139, 0, 0, 0.35),
-                inset 0 0 15px rgba(212, 175, 55, 0.05);
+    /* Mixed fire and water back-glow behind the hovered element */
+    box-shadow: 0 0 30px rgba(198, 40, 56, 0.25),
+                inset 0 0 15px rgba(85, 221, 224, 0.15);
 
     transform: translateY(-4px) scale(1.01);
 }
@@ -388,9 +412,9 @@ hr {
 }
 
 .social-container:hover {
-    background: rgba(30, 0, 0, 0.6);
-    border-color: #FFD700;
-    box-shadow: 0 0 15px rgba(139, 0, 0, 0.6), 0 0 10px rgba(255, 215, 0, 0.2);
+    background: rgba(16, 42, 67, 0.6);
+    border-color: #55DDE0;
+    box-shadow: 0 0 15px rgba(22, 125, 173, 0.6), 0 0 10px rgba(85, 221, 224, 0.2);
     transform: translateX(5px);
 }
 
@@ -411,7 +435,8 @@ hr {
 }
 
 .social-container:hover .social-item i {
-    filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.9));
+    filter: drop-shadow(0 0 12px rgba(85, 221, 224, 0.9));
+    color: #B8F3FF;
 }
 
 .social-label {
