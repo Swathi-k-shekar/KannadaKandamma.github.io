@@ -1,0 +1,8 @@
+127.0.0.1 - - [07/Oct/2026 07:53:42] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [07/Oct/2026 07:53:42] "GET /Homepage.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/Oct/2026 07:53:42] "GET /Homepage.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/Oct/2026 07:53:43] "GET /assets/Moonlit%20Silhouette.png HTTP/1.1" 200 -
+127.0.0.1 - - [07/Oct/2026 07:53:43] "GET /assets/Fiery%20Nebula.png HTTP/1.1" 200 -
+127.0.0.1 - - [07/Oct/2026 07:53:43] "GET /assets/Obsidian%20Cracked%20Earth.png HTTP/1.1" 200 -
+127.0.0.1 - - [07/Oct/2026 07:53:43] "GET /assets/Theater%20Masks.png HTTP/1.1" 200 -
+127.0.0.1 - - [07/Oct/2026 07:53:43] "GET /assets/Film%20Reel.png HTTP/1.1" 200 -
